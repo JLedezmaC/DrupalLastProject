@@ -1,0 +1,7 @@
+uuid: a6b68f3b-6b5f-4102-a278-c05ab74b941a
+langcode: en
+status: true
+dependencies: {  }
+name: media_icon
+label: 'Media Icon'
+effects: {  }

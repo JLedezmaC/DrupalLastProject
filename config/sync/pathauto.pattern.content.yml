@@ -1,0 +1,23 @@
+uuid: 8561606d-49b0-4896-a779-33a376860c08
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: content
+label: Contenido
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:name]'
+selection_criteria:
+  361ef6d8-fda9-487a-9f95-c2878ca9786e:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      categories: categories
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 361ef6d8-fda9-487a-9f95-c2878ca9786e
+selection_logic: and
+weight: -5
+relationships: {  }

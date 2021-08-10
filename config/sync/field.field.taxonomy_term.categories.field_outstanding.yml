@@ -1,0 +1,21 @@
+uuid: 9991a8d9-40f8-4854-aac4-24da59dda82e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_outstanding
+    - taxonomy.vocabulary.categories
+  module:
+    - options
+id: taxonomy_term.categories.field_outstanding
+field_name: field_outstanding
+entity_type: taxonomy_term
+bundle: categories
+label: Destacado
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
