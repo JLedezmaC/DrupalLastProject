@@ -1,0 +1,22 @@
+uuid: 6f27bf24-bf27-415a-88d9-076525b4d812
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.document.field_document
+    - paragraphs.paragraphs_type.document
+id: paragraph.document.default
+targetEntityType: paragraph
+bundle: document
+mode: default
+content:
+  field_document:
+    type: entity_reference_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden: {  }

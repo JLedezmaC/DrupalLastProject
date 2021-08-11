@@ -4,13 +4,18 @@ status: true
 dependencies:
   config:
     - field.field.node.noticias.body
+    - field.field.node.noticias.field_categorization
+    - field.field.node.noticias.field_destacado
+    - field.field.node.noticias.field_paragraph
     - field.field.node.noticias.field_picture
     - field.field.node.noticias.field_summary
+    - field.field.node.noticias.field_tag
     - field.field.node.noticias.field_title
     - image.style.thumbnail
     - node.type.noticias
   module:
     - image
+    - paragraphs
     - path
     - text
 id: node.noticias.default
@@ -34,6 +39,34 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_categorization:
+    weight: 126
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_destacado:
+    weight: 128
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_paragraph:
+    type: entity_reference_paragraphs
+    weight: 125
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
   field_picture:
     weight: 122
     settings:
@@ -49,6 +82,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
+  field_tag:
+    weight: 127
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_title:
     weight: 124

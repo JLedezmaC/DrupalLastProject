@@ -4,12 +4,18 @@ status: true
 dependencies:
   config:
     - field.field.node.noticias.body
+    - field.field.node.noticias.field_categorization
+    - field.field.node.noticias.field_destacado
+    - field.field.node.noticias.field_paragraph
     - field.field.node.noticias.field_picture
     - field.field.node.noticias.field_summary
+    - field.field.node.noticias.field_tag
     - field.field.node.noticias.field_title
     - node.type.noticias
   module:
+    - entity_reference_revisions
     - image
+    - options
     - text
     - user
 id: node.noticias.default
@@ -22,6 +28,30 @@ content:
     type: text_default
     weight: 101
     settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_categorization:
+    weight: 106
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_destacado:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_paragraph:
+    type: entity_reference_revisions_entity_view
+    weight: 105
+    label: above
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     region: content
   field_picture:
@@ -39,6 +69,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
+  field_tag:
+    weight: 107
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
     region: content
   field_title:
     weight: 104

@@ -1,0 +1,32 @@
+uuid: 78b1e885-3690-4516-b5ec-eec001c825f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text.field_cita
+    - field.field.paragraph.text.field_texto
+    - paragraphs.paragraphs_type.text
+  module:
+    - text
+id: paragraph.text.default
+targetEntityType: paragraph
+bundle: text
+mode: default
+content:
+  field_cita:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_texto:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

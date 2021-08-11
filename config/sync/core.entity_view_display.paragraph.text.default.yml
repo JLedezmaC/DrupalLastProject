@@ -1,0 +1,31 @@
+uuid: ceee2bed-bfd1-439f-a812-b638c0d8c936
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text.field_cita
+    - field.field.paragraph.text.field_texto
+    - paragraphs.paragraphs_type.text
+  module:
+    - options
+    - text
+id: paragraph.text.default
+targetEntityType: paragraph
+bundle: text
+mode: default
+content:
+  field_cita:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_texto:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }
