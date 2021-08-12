@@ -1,15 +1,15 @@
-uuid: 33e18fcb-3ed8-4ef6-aeb1-f7e0ae7cb85c
+uuid: bc152521-630d-4563-8f94-6c77e9e46a04
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_title
+    - field.storage.node.field_title_
     - node.type.noticias
-id: node.noticias.field_title
-field_name: field_title
+id: node.noticias.field_title_
+field_name: field_title_
 entity_type: node
 bundle: noticias
-label: Título
+label: 'Title '
 description: ''
 required: false
 translatable: false

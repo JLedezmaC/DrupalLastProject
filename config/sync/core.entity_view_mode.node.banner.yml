@@ -1,0 +1,10 @@
+uuid: 2875c993-9c9c-40c5-beaa-157df73b3f9a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.banner
+label: 'Banner Content'
+targetEntityType: node
+cache: true

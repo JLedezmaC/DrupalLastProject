@@ -1,0 +1,22 @@
+uuid: 412e3ed0-a6fb-4598-9c2d-a69feca9a304
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: title_teaser_
+label: 'Title teaser '
+type: 'canonical_entities:node'
+pattern: '[node:field_title_]'
+selection_criteria:
+  603ccc3d-de20-47ca-92a2-7cc6fe8cf009:
+    id: node_type
+    bundles:
+      noticias: noticias
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 603ccc3d-de20-47ca-92a2-7cc6fe8cf009
+selection_logic: and
+weight: -5
+relationships: {  }

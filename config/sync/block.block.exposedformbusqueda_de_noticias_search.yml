@@ -1,0 +1,29 @@
+uuid: f16eb312-ffc8-47e3-a96c-9a557f82be47
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.busqueda_de_noticias_
+  module:
+    - system
+    - views
+  theme:
+    - claro
+id: exposedformbusqueda_de_noticias_search
+theme: claro
+region: content
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:busqueda_de_noticias_-search'
+settings:
+  id: 'views_exposed_filter_block:busqueda_de_noticias_-search'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /deporte
+    negate: false
+    context_mapping: {  }

@@ -4,13 +4,13 @@ status: true
 dependencies:
   config:
     - field.storage.taxonomy_term.field_icon
-    - media.type.image
+    - media.type.icon_images_
     - taxonomy.vocabulary.categories
 id: taxonomy_term.categories.field_icon
 field_name: field_icon
 entity_type: taxonomy_term
 bundle: categories
-label: Icono
+label: 'Imagen Categoría '
 description: ''
 required: false
 translatable: false
@@ -20,9 +20,9 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
-      image: image
+      icon_images_: icon_images_
     sort:
       field: _none
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: icon_images_
 field_type: entity_reference

@@ -1,0 +1,29 @@
+uuid: 2d4092fa-14ab-484c-8802-459f16cb694e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.busqueda_de_noticias_
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: exposedformbusqueda_de_noticias_search_2
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:busqueda_de_noticias_-search'
+settings:
+  id: 'views_exposed_filter_block:busqueda_de_noticias_-search'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: "/deporte\r\n/tecnologia \r\n/economia\r\n/entretenimiento\r\n/farandula\r\n/paranormal\r\n/politica\r\n/tecnologia\r\n/turismo \r\n"
+    negate: false
+    context_mapping: {  }

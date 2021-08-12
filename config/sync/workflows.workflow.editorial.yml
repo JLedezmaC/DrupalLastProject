@@ -2,6 +2,8 @@ uuid: fc02e986-78cc-4593-a4be-94cd0d5e76ae
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.noticias
   module:
     - content_moderation
 _core:
@@ -59,5 +61,7 @@ type_settings:
       from:
         - draft
         - published
-  entity_types: {  }
+  entity_types:
+    node:
+      - noticias
   default_moderation_state: draft

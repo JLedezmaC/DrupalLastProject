@@ -1,0 +1,14 @@
+uuid: 84f29d4b-e5e2-4f7e-a83c-de2dbc2a4092
+langcode: en
+status: true
+dependencies: {  }
+name: noticias_image
+label: 'Noticias Image'
+effects:
+  78324054-0ec7-4f35-b9ee-f54fd0444954:
+    uuid: 78324054-0ec7-4f35-b9ee-f54fd0444954
+    id: image_resize
+    weight: 1
+    data:
+      width: 400
+      height: 200

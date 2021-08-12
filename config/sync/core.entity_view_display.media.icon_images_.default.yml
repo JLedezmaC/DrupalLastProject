@@ -1,0 +1,29 @@
+uuid: b7007e98-aa04-4e6e-8170-9d58c90c611e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.icon_images_.field_media_image_1
+    - image.style.thumbnail
+    - media.type.icon_images_
+  module:
+    - image
+id: media.icon_images_.default
+targetEntityType: media
+bundle: icon_images_
+mode: default
+content:
+  field_media_image_1:
+    label: visually_hidden
+    weight: 0
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,26 @@
+uuid: db7152e7-264d-4200-984c-f40bcef2ae3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_slider.field_carrousel
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.image_slider
+  module:
+    - image
+id: paragraph.image_slider.default
+targetEntityType: paragraph
+bundle: image_slider
+mode: default
+content:
+  field_carrousel:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  status: true

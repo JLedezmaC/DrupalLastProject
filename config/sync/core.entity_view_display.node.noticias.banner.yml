@@ -1,0 +1,116 @@
+uuid: f3233868-7a36-4e96-bd7b-4a729fe09816
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.banner
+    - field.field.node.noticias.body
+    - field.field.node.noticias.field_categorization
+    - field.field.node.noticias.field_date
+    - field.field.node.noticias.field_destacado
+    - field.field.node.noticias.field_paragraph
+    - field.field.node.noticias.field_picture
+    - field.field.node.noticias.field_summary
+    - field.field.node.noticias.field_tag
+    - field.field.node.noticias.field_title_
+    - image.style.bannerimages
+    - image.style.media_icon
+    - node.type.noticias
+  module:
+    - layout_builder
+    - slick
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+id: node.noticias.banner
+targetEntityType: node
+bundle: noticias
+mode: banner
+content:
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_categorization:
+    weight: 3
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_picture:
+    weight: 1
+    label: visually_hidden
+    settings:
+      style: grid
+      optionset: default
+      optionset_thumbnail: ''
+      skin: classic
+      skin_thumbnail: ''
+      image_style: bannerimages
+      thumbnail_effect: ''
+      thumbnail_position: ''
+      media_switch: ''
+      thumbnail_style: media_icon
+      ratio: ''
+      grid: null
+      grid_medium: null
+      grid_small: null
+      visible_items: null
+      layout: ''
+      thumbnail_caption: ''
+      caption:
+        title: title
+        alt: alt
+      cache: 0
+      current_view_mode: banner
+      background: false
+      use_theme_field: false
+      preserve_keys: false
+      override: false
+      overridables:
+        arrows: '0'
+        autoplay: '0'
+        dots: '0'
+        draggable: '0'
+        infinite: '0'
+        mouseWheel: '0'
+        randomize: '0'
+        variableWidth: '0'
+      skin_arrows: ''
+      skin_dots: ''
+      fx: ''
+      icon: ''
+      view_mode: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      responsive_image_style: ''
+      box_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+    third_party_settings: {  }
+    type: slick_image
+    region: content
+  field_summary:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  body: true
+  field_date: true
+  field_destacado: true
+  field_paragraph: true
+  field_tag: true
+  field_title_: true
+  links: true

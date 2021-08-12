@@ -6,14 +6,17 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.noticias.body
     - field.field.node.noticias.field_categorization
+    - field.field.node.noticias.field_date
     - field.field.node.noticias.field_destacado
     - field.field.node.noticias.field_paragraph
     - field.field.node.noticias.field_picture
     - field.field.node.noticias.field_summary
     - field.field.node.noticias.field_tag
-    - field.field.node.noticias.field_title
+    - field.field.node.noticias.field_title_
+    - image.style.noticias_image
     - node.type.noticias
   module:
+    - datetime
     - image
     - text
     - user
@@ -22,13 +25,27 @@ targetEntityType: node
 bundle: noticias
 mode: teaser
 content:
+  content_moderation_control:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_date:
+    type: datetime_default
+    weight: 3
+    region: content
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
   field_picture:
     type: image
     weight: 1
     region: content
-    label: above
+    label: visually_hidden
     settings:
-      image_style: ''
+      image_style: noticias_image
       image_link: ''
     third_party_settings: {  }
   field_summary:
@@ -38,18 +55,11 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-  field_title:
-    type: string
-    weight: 0
-    region: content
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
 hidden:
   body: true
   field_categorization: true
   field_destacado: true
   field_paragraph: true
   field_tag: true
+  field_title_: true
   links: true

@@ -5,14 +5,17 @@ dependencies:
   config:
     - field.field.node.noticias.body
     - field.field.node.noticias.field_categorization
+    - field.field.node.noticias.field_date
     - field.field.node.noticias.field_destacado
     - field.field.node.noticias.field_paragraph
     - field.field.node.noticias.field_picture
     - field.field.node.noticias.field_summary
     - field.field.node.noticias.field_tag
-    - field.field.node.noticias.field_title
+    - field.field.node.noticias.field_title_
+    - image.style.noticias_image
     - node.type.noticias
   module:
+    - datetime
     - entity_reference_revisions
     - image
     - options
@@ -26,20 +29,29 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_categorization:
-    weight: 106
+    weight: 6
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_date:
+    weight: 9
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_destacado:
-    weight: 108
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -47,7 +59,7 @@ content:
     region: content
   field_paragraph:
     type: entity_reference_revisions_entity_view
-    weight: 105
+    weight: 5
     label: above
     settings:
       view_mode: default
@@ -55,39 +67,39 @@ content:
     third_party_settings: {  }
     region: content
   field_picture:
-    weight: 102
+    weight: 3
     label: above
     settings:
-      image_style: ''
+      image_style: noticias_image
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
   field_summary:
-    weight: 103
+    weight: 4
     label: above
     settings: {  }
     third_party_settings: {  }
     type: text_default
     region: content
   field_tag:
-    weight: 107
+    weight: 7
     label: above
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  field_title:
-    weight: 104
-    label: above
+  field_title_:
+    weight: 0
+    label: visually_hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   links:
-    weight: 100
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }

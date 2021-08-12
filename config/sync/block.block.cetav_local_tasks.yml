@@ -1,0 +1,22 @@
+uuid: 7e1e4657-4601-4281-9cd9-580c32fe86a0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - cetav
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: cetav_local_tasks
+theme: cetav
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

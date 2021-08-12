@@ -7,9 +7,17 @@ dependencies:
     - field.field.taxonomy_term.categories.field_icon
     - field.field.taxonomy_term.categories.field_outstanding
     - taxonomy.vocabulary.categories
+    - views.view.busqueda_de_noticias_
   module:
+    - layout_builder
+    - layout_discovery
     - options
     - text
+    - views
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
 id: taxonomy_term.categories.default
 targetEntityType: taxonomy_term
 bundle: categories
